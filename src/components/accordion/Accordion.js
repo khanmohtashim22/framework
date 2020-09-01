@@ -1,32 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const AccordionControl = ({ children, handleClick, open }) => {
-  const clonedChildren = React.Children.map(children, child => React.cloneElement(child, { open }))
-  return (
-    <div onClick={handleClick}>
-      {clonedChildren}
-    </div>
-  )
-}
-
-AccordionControl.propTypes = {
-  children: PropTypes.node.isRequired,
-  handleClick: PropTypes.func
-}
-
-const AccordionContent = ({ children, open }) => open ? (
-  <>
-    {children}
-  </>
-) : null
-
-
-AccordionContent.propTypes = {
-  children: PropTypes.node.isRequired,
-  open: PropTypes.bool
-}
-
+import AccordionContent from './accordion-content/AccordionContent'
+import AccordionControl from './accordion-control/AccordionControl'
 
 class Accordion extends React.Component {
 
