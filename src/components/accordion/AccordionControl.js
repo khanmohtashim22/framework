@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import AccessibleClick from '../../accessible-click/AccessibleClick'
+import AccessibleClick from '../accessible-click/AccessibleClick'
 
 const AccordionControl = ({ children, handleClick, open }) => {
   const clonedChildren = React.Children.map(children, child => React.cloneElement(child, { open }))
