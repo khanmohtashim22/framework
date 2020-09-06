@@ -5,7 +5,7 @@ import styles from './ExpandCollapse.module.scss'
 
 const ExpandCollapseContainer = ({ children }) => <div className={styles.container}>{children}</div>
 
-ExpandCollapseContainer.prototype = {
+ExpandCollapseContainer.propTypes = {
   children: PropTypes.node,
 }
 

@@ -16,7 +16,7 @@ const ExpandCollapseHeading = ({ children, open }) => (
   </div>
 )
 
-ExpandCollapseHeading.prototype = {
+ExpandCollapseHeading.propTypes = {
   children: PropTypes.node,
   open: PropTypes.bool
 }

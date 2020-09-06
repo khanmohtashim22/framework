@@ -9,7 +9,7 @@ const ExpandCollapseContent = ({ children }) => (
   </div>
 )
 
-ExpandCollapseContent.prototype = {
+ExpandCollapseContent.propTypes = {
   children: PropTypes.node
 }
 
