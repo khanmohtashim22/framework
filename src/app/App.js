@@ -4,7 +4,7 @@ import React from 'react'
 import BlockPanel from './panel/block-panel/BlockPanel'
 
 const App = () => (
-  <div>
+  <div data-testid="App">
     {/* <ExpandCollapsePanel /> */}
     <BlockPanel />
   </div>

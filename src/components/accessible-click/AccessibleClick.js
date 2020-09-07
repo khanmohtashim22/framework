@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import _debounce from 'lodash/debounce'
 
@@ -9,7 +9,8 @@ const _sendClick = fn => fn()
 const sendClick = _debounce(_sendClick)
 
 const AccessibleClick = ({ children, enterKey, arrowDownKey, spaceKey, tabKey }) => {
-  const accessibleId = unique()
+  const [accessibleId] = useState(unique())
+  
   const onClick = event => {
     event.stopPropagation()
     event.preventDefault()

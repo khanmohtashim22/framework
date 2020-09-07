@@ -1,10 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import { getClasses } from '../../lib/style-utils/style-utils'
+
 import styles from './ExpandCollapse.module.scss'
 
 const ExpandCollapseHeading = ({ children, open }) => (
-  <div className={[styles.heading, open ? '' : styles.borderBottom].join(" ")}>
+  <div className={getClasses({ styles, classes: ['heading', !open && 'borderBottom'] })}>
     <div className={styles.icon}>
       {
         open ? '-' : '+'
