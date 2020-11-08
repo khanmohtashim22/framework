@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import WithSpace from '../with-space/WithSpace'
+
 const Block = ({ children, el, ...restOfProps }) => {
   const Element = el
   return (
@@ -19,4 +21,4 @@ Block.propTypes = {
   el: PropTypes.string,
 }
 
-export default Block
+export default WithSpace(Block)
