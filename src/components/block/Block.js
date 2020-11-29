@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import WithSpace from '../with-space/WithSpace'
+import WithLayout from '../with-layout/WithLayout'
 
 const Block = ({ children, el, ...restOfProps }) => {
   const Element = el
@@ -21,4 +22,4 @@ Block.propTypes = {
   el: PropTypes.string,
 }
 
-export default WithSpace(Block)
+export default WithLayout(WithSpace(Block))

@@ -22,7 +22,7 @@ export const getSpaceProps = props => Object.keys(spaceStylesApi).reduce((spaceP
     for (const spaceStyle of spaceStyles) {
       styles[spaceStyle] = `${props[spaceStylesProp]}px`
     }
-    return {...spaceProps, ...styles}    
+    return { ...spaceProps, ...styles }    
   }
   return spaceProps
 }, {})

@@ -1,4 +1,4 @@
-import { pluck } from '../prop-utils'
+import { pluck, pick } from '../prop-utils'
 
 describe('prop-utils', () => {
 
@@ -23,6 +23,34 @@ describe('prop-utils', () => {
     it('should return empty object if empty object is passed', () => {
       const obj = {}
       expect(pluck(['name'], obj)).toEqual({ })
+    })
+
+  })
+
+  describe('pick', () => {
+
+    it('should select the passed in keys from passed object', () => {
+      const obj = {
+        name: 'Moe',
+        age: 0,
+        city: 'SF',
+        test: null,
+        married: false
+
+      }
+      expect(pick(['name', 'age', 'test', 'married'], obj)).toEqual({ name: 'Moe', age: 0, test: null, married: false })
+    })
+
+    it('should return empty object if keys specified are not in object', () => {
+      const obj = {
+        name: 'Moe'
+      }
+      expect(pick(['age', 'city'], obj)).toEqual({ })
+    })
+
+    it('should return empty object if empty object is passed', () => {
+      const obj = {}
+      expect(pick(['name'], obj)).toEqual({})
     })
 
   })

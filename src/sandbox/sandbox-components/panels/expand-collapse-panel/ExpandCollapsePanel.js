@@ -6,11 +6,10 @@ import AccordionContent from '../../../components/accordion/AccordionContent'
 import ExpandCollapseHeading from '../../../components/expand-collapse/ExpandCollapseHeading'
 import ExpandCollapseContent from '../../../components/expand-collapse/ExpandCollapseContent'
 import ExpandCollapseContainer from '../../../components/expand-collapse/ExpandCollapseContainer'
-
-import styles from './ExpandCollapsePanel.module.scss'
+import Block from '../../../components/block/Block'
 
 const ExpandCollapsePanel = () => (
-  <div className={styles.container}>
+  <Block p={16}>
     <ExpandCollapseContainer>
       <Accordion>
         <AccordionControl>
@@ -46,7 +45,7 @@ const ExpandCollapsePanel = () => (
         </AccordionContent>
       </Accordion>
     </ExpandCollapseContainer>
-  </div>
+  </Block>
 )
 
 export default ExpandCollapsePanel
