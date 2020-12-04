@@ -1,13 +1,13 @@
 import React from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 import NavigationBar from './sandbox-components/navigation-bar/NavigationBar'
 import Panel from './sandbox-components/panel/Panel'
-import Block from '../components/block/Block'
 
 const Sandbox = () => (
-  <Block layout={true}>
+  <Router>
     <NavigationBar />
     <Panel />
-  </Block>
+  </Router>
 )
 export default Sandbox
