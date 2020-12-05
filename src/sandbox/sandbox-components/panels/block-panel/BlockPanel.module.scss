@@ -1,0 +1,16 @@
+.props-table {
+  border-collapse: collapse;
+
+  thead {
+    font-weight: bold;
+  }
+
+  td {
+    border: 1px solid gray;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: lightgray;
+  }
+}
