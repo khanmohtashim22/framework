@@ -1,13 +1,6 @@
-export default [
+const layoutPropNames = [
   'layout',
   'inline',
-  'flex',
-  'flexNone',
-  'basisAuto',
-  'basisZero',
-  'basisMax',
-  'shrink',
-  'noShrink',
   'vertical',
   'horizontal',
   'reverse',
@@ -27,3 +20,5 @@ export default [
   'justifyAround',
   'wrap',
 ]
+
+export default layoutPropNames

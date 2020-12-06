@@ -11,38 +11,6 @@ const inline = {
   display: 'inline-flex'
 }
 
-const flex = {
-  flewGrow: 1,
-  flexShrink: 1,
-  flexBasis: 'auto',
-}
-
-const basisAuto = {
-  flexBasis: 'auto'
-}
-
-const basisZero = {
-  flexBasis: '0%'
-}
-
-const basisMax = {
-  flexBasis: '100%'
-}
-
-const flexNone = {
-  flexGrow: 0,
-  flexShrink: 0,
-  flexBasis: 'auto'
-}
-
-const noShrink = {
-  flexShrink: 0
-}
-
-const shrink = {
-  flexShrink: 1
-}
-
 const horisontal = Object.assign({}, layout, {
   flexDirection: 'row'
 })
@@ -118,13 +86,6 @@ export default {
   layout: layout,
   wrap: wrap,
   inline: inline,
-  flex: flex,
-  flexNone: flexNone,
-  basisAuto: basisAuto,
-  basisZero: basisZero,
-  basisMax: basisMax,
-  shrink: shrink,
-  noShrink: noShrink,
   horisontal: horisontal,
   horisontalReverse: horisontalReverse,
   vertical: vertical,

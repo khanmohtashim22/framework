@@ -18,6 +18,7 @@ test('should render any other props passed for example role', () => {
   expect(getByRole('role-test')).toBeTruthy()
 })
 
+// with space
 test('should render margin equal zero style if passed m prop eqaul 0', () => {
   const { getByTestId } = render(<Block data-testid="block-test" m="0">Test</Block>)
   expect(getByTestId('block-test')).toHaveStyle('margin: 0')
@@ -106,4 +107,118 @@ test('should render any other inline stlyes that are passed', () => {
   const { getByTestId } = render(<Block data-testid="block-test" p={16} style={{ color: 'black' }}>Test</Block>)
   expect(getByTestId('block-test')).toHaveStyle('padding: 16px')
   expect(getByTestId('block-test')).toHaveStyle('color: black')
+})
+
+// with layout
+test('should render \'display: flex; flex-wrap: nowrap; flex-direction: row\'when layout is set to true', () => {
+  const { getByTestId } = render(<Block data-testid="block-test" layout={true}>Test</Block>)
+  expect(getByTestId('block-test')).toHaveStyle('display: flex')
+  expect(getByTestId('block-test')).toHaveStyle('flex-wrap: nowrap')
+  expect(getByTestId('block-test')).toHaveStyle('flex-direction: row')
+})
+
+test('should render \'display: flex; flex-wrap: nowrap; flex-direction: row-reverse\'when layout and reverse is set to true', () => {
+  const { getByTestId } = render(<Block data-testid="block-test" layout={true} reverse={true}>Test</Block>)
+  expect(getByTestId('block-test')).toHaveStyle('display: flex')
+  expect(getByTestId('block-test')).toHaveStyle('flex-wrap: nowrap')
+  expect(getByTestId('block-test')).toHaveStyle('flex-direction: row-reverse')
+})
+
+test('should render \'display: flex; flex-wrap: nowrap; flex-direction: column\'when layout and vertical is set to true', () => {
+  const { getByTestId } = render(<Block data-testid="block-test" layout={true} vertical={true}>Test</Block>)
+  expect(getByTestId('block-test')).toHaveStyle('display: flex')
+  expect(getByTestId('block-test')).toHaveStyle('flex-wrap: nowrap')
+  expect(getByTestId('block-test')).toHaveStyle('flex-direction: column')
+})
+
+test('should render \'display: flex; flex-wrap: nowrap; flex-direction: column-reverse\'when layout, vetical, and reverse is set to true', () => {
+  const { getByTestId } = render(<Block data-testid="block-test" layout={true} vertical={true} reverse={true}>Test</Block>)
+  expect(getByTestId('block-test')).toHaveStyle('display: flex')
+  expect(getByTestId('block-test')).toHaveStyle('flex-wrap: nowrap')
+  expect(getByTestId('block-test')).toHaveStyle('flex-direction: column-reverse')
+})
+
+test('should render \'display: flex; flex-wrap: wrap; flex-direction: row\'when layout and wrap is set to true', () => {
+  const { getByTestId } = render(<Block data-testid="block-test" layout={true} wrap={true}>Test</Block>)
+  expect(getByTestId('block-test')).toHaveStyle('display: flex')
+  expect(getByTestId('block-test')).toHaveStyle('flex-wrap: wrap')
+  expect(getByTestId('block-test')).toHaveStyle('flex-direction: row')
+})
+
+test('should render \'display: inline-flex; flex-wrap: wrap; flex-direction: row\'when inline is set to true', () => {
+  const { getByTestId } = render(<Block data-testid="block-test" inline={true}>Test</Block>)
+  expect(getByTestId('block-test')).toHaveStyle('display: inline-flex')
+  expect(getByTestId('block-test')).toHaveStyle('flex-wrap: nowrap')
+  expect(getByTestId('block-test')).toHaveStyle('flex-direction: row')
+})
+
+test('should render \'align-items: flex-start\'when start is set to true', () => {
+  const { getByTestId } = render(<Block data-testid="block-test" start={true}>Test</Block>)
+  expect(getByTestId('block-test')).toHaveStyle('align-items: flex-start')
+})
+
+test('should render \'align-items: center\'when center is set to true', () => {
+  const { getByTestId } = render(<Block data-testid="block-test" center={true}>Test</Block>)
+  expect(getByTestId('block-test')).toHaveStyle('align-items: center')
+})
+
+test('should render \'align-items: flex-end\'when end is set to true', () => {
+  const { getByTestId } = render(<Block data-testid="block-test" end={true}>Test</Block>)
+  expect(getByTestId('block-test')).toHaveStyle('align-items: flex-end')
+})
+
+test('should render \'align-items: stretch\'when stretch is set to true', () => {
+  const { getByTestId } = render(<Block data-testid="block-test" stretch={true}>Test</Block>)
+  expect(getByTestId('block-test')).toHaveStyle('align-items: stretch')
+})
+
+test('should render \'alignItems: center; justifyContent: center\'when centered is set to true', () => {
+  const { getByTestId } = render(<Block data-testid="block-test" centered={true}>Test</Block>)
+  expect(getByTestId('block-test')).toHaveStyle('align-items: center')
+  expect(getByTestId('block-test')).toHaveStyle('justify-content: center')
+})
+
+test('should render \'align-self: flex-start\'when selfStart is set to true', () => {
+  const { getByTestId } = render(<Block data-testid="block-test" selfStart={true}>Test</Block>)
+  expect(getByTestId('block-test')).toHaveStyle('align-self: flex-start')
+})
+
+test('should render \'align-self: center\'when selfCenter is set to true', () => {
+  const { getByTestId } = render(<Block data-testid="block-test" selfCenter={true}>Test</Block>)
+  expect(getByTestId('block-test')).toHaveStyle('align-self: center')
+})
+
+test('should render \'align-self: flex-end\'when selfEnd is set to true', () => {
+  const { getByTestId } = render(<Block data-testid="block-test" selfEnd={true}>Test</Block>)
+  expect(getByTestId('block-test')).toHaveStyle('align-self: flex-end')
+})
+
+test('should render \'align-self: stretch\'when selfStretch is set to true', () => {
+  const { getByTestId } = render(<Block data-testid="block-test" selfStretch={true}>Test</Block>)
+  expect(getByTestId('block-test')).toHaveStyle('align-self: stretch')
+})
+
+test('should render \'justify-content: flex-start\'when justifyStart is set to true', () => {
+  const { getByTestId } = render(<Block data-testid="block-test" justifyStart={true}>Test</Block>)
+  expect(getByTestId('block-test')).toHaveStyle('justify-content: flex-start')
+})
+
+test('should render \'justify-content: center\'when justifyCenter is set to true', () => {
+  const { getByTestId } = render(<Block data-testid="block-test" justifyCenter={true}>Test</Block>)
+  expect(getByTestId('block-test')).toHaveStyle('justify-content: center')
+})
+
+test('should render \'justify-content: flex-end\'when justifyEnd is set to true', () => {
+  const { getByTestId } = render(<Block data-testid="block-test" justifyEnd={true}>Test</Block>)
+  expect(getByTestId('block-test')).toHaveStyle('justify-content: flex-end')
+})
+
+test('should render \'justify-content: space-between\'when justifyBetween is set to true', () => {
+  const { getByTestId } = render(<Block data-testid="block-test" justifyBetween={true}>Test</Block>)
+  expect(getByTestId('block-test')).toHaveStyle('justify-content: space-between')
+})
+
+test('should render \'justify-content: space-around\'when justifyAround is set to true', () => {
+  const { getByTestId } = render(<Block data-testid="block-test" justifyAround={true}>Test</Block>)
+  expect(getByTestId('block-test')).toHaveStyle('justify-content: space-around')
 })

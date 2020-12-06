@@ -23,36 +23,12 @@ const BlockPanel = () => (
           <td>When true, adds "display: inline-flex" to the container</td>
         </tr>
         <tr>
-          <td>flex</td>
-          <td>When true, adds "flexGrow: 1; flexShrink: 1; flexBasis: '0%'" to the container</td>
-        </tr>
-        <tr>
-          <td>flexBasis</td>
-          <td>When true, adds "flexGrow: 1; flexBasis: '0%'" to the container</td>
-        </tr>
-        <tr>
-          <td>flexAuto</td>
-          <td>When true, adds "flexGrow: 1; flexShrink: 1; flexBasis: 'auto'" to the container</td>
-        </tr>
-        <tr>
-          <td>flexNone</td>
-          <td>When true, adds "flexGrow: 0; flexShrink: 0; flexBasis: 'auto'" to the container</td>
-        </tr>
-        <tr>
-          <td>shrink</td>
-          <td>When true, adds "flexShrink: 1" to the container</td>
-        </tr>
-        <tr>
-          <td>noShrink</td>
-          <td>When true, adds "flexShrink: 0" to the container</td>
-        </tr>
-        <tr>
           <td>vertical</td>
-          <td>When true, adds "flexDirection: column" to the container</td>
+          <td>When true, adds "flex-direction: column" to the container</td>
         </tr>
         <tr>
           <td>horizontal</td>
-          <td>When true, adds "flexDirection: row" to the container</td>
+          <td>When true, adds "flex-direction: row" to the container</td>
         </tr>
         <tr>
           <td>reverse</td>
@@ -60,59 +36,59 @@ const BlockPanel = () => (
         </tr>
         <tr>
           <td>start</td>
-          <td>When true, adds "alignItems: flex-start" to the container</td>
+          <td>When true, adds "align-items: flex-start" to the container</td>
         </tr>
         <tr>
           <td>center</td>
-          <td>When true, adds "alignItems: center" to the container</td>
+          <td>When true, adds "align-items: center" to the container</td>
         </tr>
         <tr>
           <td>end</td>
-          <td>When true, adds "alignItems: flex-end" to the container</td>
+          <td>When true, adds "align-items: flex-end" to the container</td>
         </tr>
         <tr>
           <td>stretch</td>
-          <td>When true, adds "alignItems: stretch" to the container</td>
+          <td>When true, adds "align-items: stretch" to the container</td>
         </tr>
         <tr>
           <td>centered</td>
-          <td>When true, adds "alignItems: center; justifyContent: center" to the container</td>
+          <td>When true, adds "align-items: center; justify-content: center" to the container</td>
         </tr>
         <tr>
           <td>selfStart</td>
-          <td>When true, adds "alignSelf: flex-start" to the container</td>
+          <td>When true, adds "align-self: flex-start" to the container</td>
         </tr>
         <tr>
           <td>selfCenter</td>
-          <td>When true, adds "alignSelf: flex-center" to the container</td>
+          <td>When true, adds "align-self: flex-center" to the container</td>
         </tr>
         <tr>
           <td>selfEnd</td>
-          <td>When true, adds "alignSelf: flex-end" to the container</td>
+          <td>When true, adds "align-self: flex-end" to the container</td>
         </tr>
         <tr>
           <td>selfStretch</td>
-          <td>When true, adds "alignSelf: stretch" to the container</td>
+          <td>When true, adds "align-self: stretch" to the container</td>
         </tr>
         <tr>
           <td>justifyStart</td>
-          <td>When true, adds "justifyContent: flex-start" to the container</td>
+          <td>When true, adds "justify-content: flex-start" to the container</td>
         </tr>
         <tr>
           <td>justifyCenter</td>
-          <td>When true, adds "justifyContent: center" to the container</td>
+          <td>When true, adds "justify-content: center" to the container</td>
         </tr>
         <tr>
           <td>justifyEnd</td>
-          <td>When true, adds "justifyContent: flex-end" to the container</td>
+          <td>When true, adds "justify-content: flex-end" to the container</td>
         </tr>
         <tr>
           <td>justifyBetween</td>
-          <td>When true, adds "justifyContent: space-between" to the container</td>
+          <td>When true, adds "justify-content: space-between" to the container</td>
         </tr>
         <tr>
           <td>justifyAround</td>
-          <td>When true, adds "justifyContent: space-around" to the container</td>
+          <td>When true, adds "justify-content: space-around" to the container</td>
         </tr>
       </tbody>
     </table>

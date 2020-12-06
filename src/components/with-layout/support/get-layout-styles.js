@@ -23,35 +23,7 @@ const addFlexStyles = (props, style) => {
   if (props.inline) {
     newStyle = Object.assign(newStyle, style, layout.horisontal, layout.inline)
   }
-
-  if (props.flex) {
-    newStyle = Object.assign(newStyle, layout.flex, style)
-
-    if(props.basisZero) {
-      newStyle = Object.assign(newStyle, layout.basisZero)
-    }
-
-    if(props.basisMax) {
-      newStyle = Object.assign(newStyle, layout.basisMax)
-    }
-
-    if(props.basisAuto) {
-      newStyle = Object.assign(newStyle, layout.basisAuto)
-    }
-
-    if (props.shrink) {
-      newStyle = Object.assign(newStyle, layout.shrink)
-    }
-
-    if (props.noShrink) {
-      newStyle = Object.assign(newStyle, layout.noShrink)
-    }
-  }
-
-  if (props.flexNone) {
-    newStyle = Object.assign(newStyle, style, layout.flexNone)
-  }
-
+  
   return newStyle
 }
 

@@ -37,7 +37,9 @@
   },
   "jest": {
     "coveragePathIgnorePatterns": [
-      "<rootDir>/src/sandbox"
+      "<rootDir>/src/sandbox",
+      "<rootDir>/src/serviceWorker.js",
+      "<rootDir>/src/index.js"
     ]
   },
   "devDependencies": {
