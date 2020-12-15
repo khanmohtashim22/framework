@@ -22,13 +22,13 @@ const ExpandCollapsePanel = () => (
         <AccordionContent>
           <ExpandCollapseContent>
             <div>
-              Conent One
+              Heading One Content
             </div>
           </ExpandCollapseContent>
         </AccordionContent>
       </Accordion>
 
-      <Accordion open={true}>
+      <Accordion>
         <AccordionControl>
           <ExpandCollapseHeading>
             <div>
@@ -39,11 +39,66 @@ const ExpandCollapsePanel = () => (
         <AccordionContent>
           <ExpandCollapseContent>
             <div>
-              Content Two
+              Heading Two Content
             </div>
           </ExpandCollapseContent>
         </AccordionContent>
       </Accordion>
+
+      <Accordion open={true}>
+        <AccordionControl>
+          <ExpandCollapseHeading>
+            <div>
+              Initally Opened
+            </div>
+          </ExpandCollapseHeading>
+        </AccordionControl>
+        <AccordionContent>
+          <ExpandCollapseContent>
+            <div>
+              Initally Opened Content
+            </div>
+          </ExpandCollapseContent>
+        </AccordionContent>
+      </Accordion>
+
+      <Accordion>
+        <AccordionControl>
+          <ExpandCollapseHeading>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Duis eu dolor pharetra mauris feugiat efficitur eget in purus. 
+              Sed maximus risus ut neque luctus venenatis id in nisi. 
+              Nulla tempor, velit nec pulvinar venenatis, diam odio laoreet velit, consequat gravida mauris ante nec velit. 
+              Nulla in augue efficitur, blandit velit sed, tristique sapien. 
+              Donec nibh dui, dapibus quis lacinia vitae, condimentum a orci. 
+              Ut tincidunt feugiat lobortis. Morbi viverra luctus sapien sed vestibulum.
+            </p>
+          </ExpandCollapseHeading>
+        </AccordionControl>
+        <AccordionContent>
+          <ExpandCollapseContent>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Duis eu dolor pharetra mauris feugiat efficitur eget in purus. 
+              Sed maximus risus ut neque luctus venenatis id in nisi. 
+              Nulla tempor, velit nec pulvinar venenatis, diam odio laoreet velit, consequat gravida mauris ante nec velit. 
+              Nulla in augue efficitur, blandit velit sed, tristique sapien. 
+              Donec nibh dui, dapibus quis lacinia vitae, condimentum a orci. 
+              Ut tincidunt feugiat lobortis. 
+              Morbi viverra luctus sapien sed vestibulum. 
+              Phasellus eget diam sed augue hendrerit condimentum sit amet id diam. 
+              Proin at neque felis. 
+              Duis in velit ullamcorper, mollis nisi eu, commodo nisl. 
+              Sed ullamcorper, mauris ac lobortis consequat, velit ipsum vestibulum nunc, sit amet ullamcorper nunc ipsum euismod ligula. 
+              Sed at aliquet est. 
+              Integer faucibus orci non odio rhoncus, at pellentesque arcu efficitur. 
+              Etiam justo orci, facilisis id libero id, sodales sagittis odio.
+            </p>
+          </ExpandCollapseContent>
+        </AccordionContent>
+      </Accordion>
+
     </ExpandCollapseContainer>
   </PanelContainer>
 )

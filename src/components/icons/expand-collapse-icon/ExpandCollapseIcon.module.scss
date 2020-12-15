@@ -1,7 +1,9 @@
+@import "../../../css/globals.scss";
+
 .nested {
-  fill: gray;
+  fill: $gray1;
 }
 
 .unNested {
-  fill: red;
+  fill: $gray2;
 }

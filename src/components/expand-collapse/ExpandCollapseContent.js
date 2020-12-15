@@ -1,12 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import Block from '../block/Block'
+
 import styles from './ExpandCollapse.module.scss'
 
 const ExpandCollapseContent = ({ children }) => (
-  <div className={styles.content}>
+  <Block pl={24} pb={24} pt={12} className={styles.content}>
     {children}
-  </div>
+  </Block>
 )
 
 ExpandCollapseContent.propTypes = {
