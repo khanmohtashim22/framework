@@ -50,6 +50,10 @@ const addLayoutAlignStyles = (props, style) => {
     newStyle = Object.assign(newStyle, style, layout.centered)
   }
 
+  if (props.baseline) {
+    newStyle = Object.assign(newStyle, style, layout.alignBaseline)
+  }
+
   return newStyle
 }
 
@@ -70,6 +74,10 @@ const addLayoutSelfStyles = (props, style) => {
 
   if (props.selfStretch) {
     newStyle = Object.assign(newStyle, style, layout.selfAlignStretch)
+  }
+
+  if (props.selfBaseline) {
+    newStyle = Object.assign(newStyle, style, layout.selfAlignBaseline)
   }
 
   return newStyle

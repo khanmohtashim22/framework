@@ -43,6 +43,10 @@ const alignStretch = {
   alignItems: 'stretch'
 }
 
+const alignBaseline = {
+  alignItems: 'baseline'
+}
+
 const selfAlignStart = {
   alignSelf: 'flex-start'
 }
@@ -57,6 +61,10 @@ const selfAlignEnd = {
 
 const selfAlignStretch = {
   alignSelf: 'stretch'
+}
+
+const selfAlignBaseline = {
+  alignSelf: 'baseline'
 }
 
 const justifyStart = {
@@ -82,25 +90,27 @@ const justifyAround = {
 const centered = Object.assign({}, layout, alignCenter, justifyCenter)
 
 export default {
-  centered: centered,
-  layout: layout,
-  wrap: wrap,
-  inline: inline,
-  horisontal: horisontal,
-  horisontalReverse: horisontalReverse,
-  vertical: vertical,
-  verticalReverse: verticalReverse,
-  alignStart: alignStart,
-  alignCenter: alignCenter,
-  alignEnd: alignEnd,
-  alignStretch: alignStretch,
-  selfAlignStart: selfAlignStart,
-  selfAlignCenter: selfAlignCenter,
-  selfAlignEnd: selfAlignEnd,
-  selfAlignStretch: selfAlignStretch,
-  justifyStart: justifyStart,
-  justifyCenter: justifyCenter,
-  justifyEnd: justifyEnd,
-  justifyBetween: justifyBetween,
-  justifyAround: justifyAround,
+  centered,
+  layout,
+  wrap,
+  inline,
+  horisontal,
+  horisontalReverse,
+  vertical,
+  verticalReverse,
+  alignStart,
+  alignCenter,
+  alignEnd,
+  alignStretch,
+  alignBaseline,
+  selfAlignStart,
+  selfAlignCenter,
+  selfAlignEnd,
+  selfAlignStretch,
+  selfAlignBaseline,
+  justifyStart,
+  justifyCenter,
+  justifyEnd,
+  justifyBetween,
+  justifyAround
 }

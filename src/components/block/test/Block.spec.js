@@ -172,6 +172,11 @@ test('should render \'align-items: stretch\'when stretch is set to true', () => 
   expect(getByTestId('block-test')).toHaveStyle('align-items: stretch')
 })
 
+test('should render \'align-items: baseline\'when baseline is set to true', () => {
+  const { getByTestId } = render(<Block data-testid="block-test" baseline={true}>Test</Block>)
+  expect(getByTestId('block-test')).toHaveStyle('align-items: baseline')
+})
+
 test('should render \'alignItems: center; justifyContent: center\'when centered is set to true', () => {
   const { getByTestId } = render(<Block data-testid="block-test" centered={true}>Test</Block>)
   expect(getByTestId('block-test')).toHaveStyle('align-items: center')
@@ -196,6 +201,11 @@ test('should render \'align-self: flex-end\'when selfEnd is set to true', () => 
 test('should render \'align-self: stretch\'when selfStretch is set to true', () => {
   const { getByTestId } = render(<Block data-testid="block-test" selfStretch={true}>Test</Block>)
   expect(getByTestId('block-test')).toHaveStyle('align-self: stretch')
+})
+
+test('should render \'align-self: baseline\'when selfBaseline is set to true', () => {
+  const { getByTestId } = render(<Block data-testid="block-test" selfBaseline={true}>Test</Block>)
+  expect(getByTestId('block-test')).toHaveStyle('align-self: baseline')
 })
 
 test('should render \'justify-content: flex-start\'when justifyStart is set to true', () => {
