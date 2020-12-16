@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import PropTypes from 'prop-types'
+
+import AccordionContext from './AccordionContext'
 
 const Accordion = ({ open: initiallyOpened = false, children }) => {
   const [open, setOpen] = useState(initiallyOpened)
+  const { level } = useContext(AccordionContext)
   const handleClick = () => {
     setOpen(!open)
   }
@@ -11,9 +14,9 @@ const Accordion = ({ open: initiallyOpened = false, children }) => {
     handleClick,
   }))
   return (
-    <>
+    <AccordionContext.Provider value={{ level: level + 1 }}>
       {clonedChildren}
-    </>
+    </AccordionContext.Provider>
   )
 }
 

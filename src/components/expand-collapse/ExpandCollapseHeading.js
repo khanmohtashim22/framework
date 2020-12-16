@@ -1,25 +1,29 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 
 import { getClasses } from '../../lib/style-utils/style-utils'
 import Block from '../block/Block'
 import ExpandCollapseIcon from '../icons/expand-collapse-icon/ExpandCollapseIcon'
+import AccordionContent from '../accordion/AccordionContext'
 
 import styles from './ExpandCollapse.module.scss'
 
-const ExpandCollapseHeading = ({ children, open }) => (
-  <Block 
-    layout={true} 
-    py={16} 
-    center={true} 
-    className={getClasses({ styles, classes: ['heading', open ? 'active' : 'inactive'] })}
-  >
-    <Block centered={true} mr={8}>
-      <ExpandCollapseIcon open={open} />
+const ExpandCollapseHeading = ({ children, open }) => {
+  const nested = useContext(AccordionContent).level > 1
+  return (
+    <Block 
+      layout={true} 
+      py={16} 
+      center={true} 
+      className={getClasses({ styles, classes: ['heading', open ? 'active' : 'inactive', nested && 'nested'] })}
+    >
+      <Block centered={true} mr={8}>
+        <ExpandCollapseIcon open={open} nested={nested} />
+      </Block>
+      {children}
     </Block>
-    {children}
-  </Block>
-)
+  )
+}
 
 ExpandCollapseHeading.propTypes = {
   children: PropTypes.node,

@@ -6,33 +6,61 @@
 
 .heading {
   border-top: 1px solid $gray3;
-}
+  
+  &.inactive {
+    color: $gray2;
+    font-size: 18px;
+    line-height: 23px;
 
-.active {
-  color: $gray2;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 23px;
-}
+    &:hover {
+      color: $gray4;
+      text-decoration: underline;
+    }
 
-.active:hover {
-  color: $gray4;
-  text-decoration: underline;
-}
+    &.nested {
+      color: $gray1;
+      font-size: 16px;
+      line-height: 20px;
 
-.inactive {
-  color: $gray2;
-  font-size: 18px;
-  line-height: 23px;
-}
+      &:hover {
+        color: $gray2;
+        text-decoration: underline;
+      }
+    }
+  }
 
-.inactive:hover {
-  color: $gray4;
-  text-decoration: underline;
+  &.active {
+    color: $gray2;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+
+    &:hover {
+      color: $gray4;
+      text-decoration: underline;
+    }
+
+    &.nested {
+      color: $gray1;
+      font-size: 16px;
+      line-height: 20px;
+
+      &:hover {
+        color: $gray2;
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 .content {
   color: $gray2;
   font-size: 15px;
   line-height: 19px;
+
+  &.nested {
+    color: $gray1;
+    font-size: 14px;
+    line-height: 18px;
+  }
 }

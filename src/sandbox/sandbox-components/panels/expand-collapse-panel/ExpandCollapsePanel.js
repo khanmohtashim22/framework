@@ -99,6 +99,82 @@ const ExpandCollapsePanel = () => (
         </AccordionContent>
       </Accordion>
 
+      <Accordion>
+        <AccordionControl>
+          <ExpandCollapseHeading>
+            <div>
+              Single Nested
+            </div>
+          </ExpandCollapseHeading>
+        </AccordionControl>
+        <AccordionContent>
+          <ExpandCollapseContent>
+            <Accordion>
+              <AccordionControl>
+                <ExpandCollapseHeading>
+                  <div>
+                    Single Nested Header
+                  </div>
+                </ExpandCollapseHeading>
+              </AccordionControl>
+              <AccordionContent>
+                <ExpandCollapseContent>
+                  <div>
+                    Single Nested Header Content
+                  </div>
+                </ExpandCollapseContent>
+              </AccordionContent>
+            </Accordion>
+          </ExpandCollapseContent>
+        </AccordionContent>
+      </Accordion>
+
+      <Accordion>
+        <AccordionControl>
+          <ExpandCollapseHeading>
+            <div>
+              Multi Nested
+            </div>
+          </ExpandCollapseHeading>
+        </AccordionControl>
+        <AccordionContent>
+          <ExpandCollapseContent>
+            <Accordion>
+              <AccordionControl>
+                <ExpandCollapseHeading>
+                  <div>
+                    Mulit Nested Header One
+                  </div>
+                </ExpandCollapseHeading>
+              </AccordionControl>
+              <AccordionContent>
+                <ExpandCollapseContent>
+                  <div>
+                    Mulit Nested Header One Content
+                  </div>
+                </ExpandCollapseContent>
+              </AccordionContent>
+            </Accordion>
+            <Accordion>
+              <AccordionControl>
+                <ExpandCollapseHeading>
+                  <div>
+                    Muli Nested Header Two
+                  </div>
+                </ExpandCollapseHeading>
+              </AccordionControl>
+              <AccordionContent>
+                <ExpandCollapseContent>
+                  <div>
+                    Muli Nested Header Two Content
+                  </div>
+                </ExpandCollapseContent>
+              </AccordionContent>
+            </Accordion>
+          </ExpandCollapseContent>
+        </AccordionContent>
+      </Accordion>
+
     </ExpandCollapseContainer>
   </PanelContainer>
 )
