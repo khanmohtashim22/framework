@@ -14,7 +14,7 @@ const ExpandCollapseHeading = ({ children, open }) => (
     center={true} 
     className={getClasses({ styles, classes: ['heading', open ? 'active' : 'inactive'] })}
   >
-    <Block mr={8}>
+    <Block centered={true} mr={8}>
       <ExpandCollapseIcon open={open} />
     </Block>
     {children}
