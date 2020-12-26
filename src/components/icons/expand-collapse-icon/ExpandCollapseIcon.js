@@ -5,7 +5,7 @@ import { getClasses } from '../../../lib/style-utils/style-utils'
 
 import styles from './ExpandCollapseIcon.module.scss'
 
-const ExpandCollapseIcon = ({ nested = false, open }) => {
+const ExpandCollapseIcon = ({ nested, open }) => {
   const width = nested ? '12' : '16'
   const translateXY = nested ? '6' : '8'
   const y = nested ? '5' : '7'
