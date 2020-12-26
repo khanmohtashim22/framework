@@ -9,12 +9,13 @@ import styles from './ExpandCollapse.module.scss'
 
 const ExpandCollapseContent = ({ children }) => {
   const nested = useContext(AccordionContent).level > 1
+  const hasNest = React.Children.map(children, child => React.isValidElement(child) && child.type.displayName === 'Accordion').includes(true)
   return (
     <Block 
       pl={nested ? 20 : 24} 
-      pb={24} 
+      pb={hasNest ? 0 : 24} 
       pt={12} 
-      className={getClasses({ styles, classes: ['content', nested && 'nested'] })}
+      className={getClasses({ styles, classes: ['content', nested && 'nested', hasNest && 'hasNest'] })}
     >
       {children}
     </Block>

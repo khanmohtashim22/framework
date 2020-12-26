@@ -20,6 +20,8 @@ const Accordion = ({ open: initiallyOpened = false, children }) => {
   )
 }
 
+Accordion.displayName = 'Accordion'
+
 Accordion.propTypes = {
   children: PropTypes.node.isRequired,
   open: PropTypes.bool,
