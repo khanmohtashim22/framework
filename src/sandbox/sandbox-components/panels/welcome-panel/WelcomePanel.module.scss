@@ -1,7 +1,10 @@
+@import "../../../../css/globals.scss";
+
 .welcome-panel {
   height: 100vh;
 }
 
 .header {
   font-size: 64px;
+  color: $gray2;
 }
