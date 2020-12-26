@@ -1,10 +1,12 @@
+@import "../../../css/globals.scss";
+
 .navigation-bar {
   position: fixed;
   width: 250px;
   overflow-y: scroll;
   top: 0;
   bottom: 0;
-  border-right: 1px solid black;
+  border-right: 1px solid $gray3;
 }
 
 .list {
@@ -17,10 +19,14 @@
   padding: 10px 16px;
   display: block;
   text-decoration: none;
-  color: black;
+  color: $gray2;
 }
 
 .link:hover,
 .link:focus {
   text-decoration: underline;
+}
+
+.logo {
+  color: $gray2;
 }

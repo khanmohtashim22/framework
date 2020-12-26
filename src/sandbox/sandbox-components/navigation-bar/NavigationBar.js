@@ -8,7 +8,7 @@ import styles from './NavigationBar.module.scss'
 
 const NavigationBar = () => (
   <div className={styles['navigation-bar']}>
-    <Block el="h1" m={0} p={16}>
+    <Block el="h1" m={0} p={16} className={styles['logo']}>
       Framework
     </Block>
     <ul className={styles['list']}>
