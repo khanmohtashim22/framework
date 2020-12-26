@@ -1,12 +1,15 @@
+@import "../../../../css/globals.scss";
+
 .props-table {
   border-collapse: collapse;
+  color: $gray2;
 
   thead {
     font-weight: bold;
   }
 
   td {
-    border: 1px solid gray;
+    border: 1px solid $gray3;
     padding: 8px;
   }
 
