@@ -4,14 +4,15 @@ import PropTypes from 'prop-types'
 import { getClasses } from '../../lib/style-utils/style-utils'
 import Block from '../block/Block'
 import ExpandCollapseIcon from '../icons/expand-collapse-icon/ExpandCollapseIcon'
-import AccordionContent from '../accordion/AccordionContext'
+import AccordionContext from '../accordion/AccordionContext'
 
 import styles from './ExpandCollapse.module.scss'
 
 const ExpandCollapseHeading = ({ children, open }) => {
-  const nested = useContext(AccordionContent).level > 1
+  const nested = useContext(AccordionContext).level > 1
   return (
     <Block 
+      data-testid="expand-collapse-heading"
       layout={true} 
       py={16} 
       center={true} 
