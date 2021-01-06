@@ -6,8 +6,8 @@ import ButtonPanel from '../sandbox-components/panels/button-panel/ButtonPanel'
 const Routes = [
   { path: '/', component: WelcomePanel, name: 'Welcome' },
   { path: '/block', component: BlockPanel, name: 'Block' },
-  { path: '/expand-collapse', component: ExpandCollapsePanel, name: 'ExpandCollapse' },
-  { path: '/button', component: ButtonPanel, name: 'Button' }
+  { path: '/button', component: ButtonPanel, name: 'Button' },
+  { path: '/expand-collapse', component: ExpandCollapsePanel, name: 'ExpandCollapse' }
 ]
 
 export default Routes
