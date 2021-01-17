@@ -1,0 +1,39 @@
+@import "../../css/globals.scss";
+
+.button {
+  border: none;
+  background: none;
+  font-size: 18px;
+  line-height: 20px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  min-width: 176px;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    &.disabled {
+      text-decoration: none;
+    }
+  }
+}
+
+.primary {
+  color: white;
+  background-color: $indigo;
+
+  &.disabled {
+    background-color: $indigo-disabled;
+  }
+}
+
+.secondary {
+  background-color: white;
+  color: $indigo;
+  border: 2px solid $indigo;
+  
+  &.disabled {
+    border-color: $indigo-disabled;
+    color: $indigo-disabled;
+  }
+}
