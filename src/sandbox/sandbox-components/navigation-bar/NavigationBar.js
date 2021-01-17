@@ -8,12 +8,12 @@ import styles from './NavigationBar.module.scss'
 
 const NavigationBar = () => (
   <div className={styles['navigation-bar']}>
-    <Block el="h1" m={0} p={16} className={styles['logo']}>
+    <Link to="/" className={styles['logo']}>
       Framework
-    </Block>
+    </Link>
     <ul className={styles['list']}>
       {
-        Routes.map((route, index) => {
+        Routes.filter(({ path }) => path !== '/').map((route, index) => {
           const { path, name } = route
           return (
             <Block el="li" key={index}>
