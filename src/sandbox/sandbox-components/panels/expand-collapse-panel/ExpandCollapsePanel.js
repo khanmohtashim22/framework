@@ -6,6 +6,7 @@ import AccordionContent from '../../../../components/accordion/AccordionContent'
 import ExpandCollapseHeading from '../../../../components/expand-collapse/ExpandCollapseHeading'
 import ExpandCollapseContent from '../../../../components/expand-collapse/ExpandCollapseContent'
 import ExpandCollapseContainer from '../../../../components/expand-collapse/ExpandCollapseContainer'
+
 import PanelContainer from '../../panel-container/PanelContainer'
 
 const ExpandCollapsePanel = () => (
