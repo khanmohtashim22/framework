@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
-const Modal = () => {
+const Modal = ({ isOpen, children }) => {
   const modalRoot = document.getElementById('modal-root')
   const modaContainer = document.createElement('div')
 
@@ -11,7 +11,7 @@ const Modal = () => {
   })
 
   return ReactDOM.createPortal(
-    <h1 id="mohtashim">Test</h1>,
+    isOpen ? <div>{children}</div> : null,
     modaContainer
   )
 }
