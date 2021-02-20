@@ -3,16 +3,16 @@ import ReactDOM from 'react-dom'
 
 const Modal = () => {
   const modalRoot = document.getElementById('modal-root')
-  const container = document.createElement('div')
+  const modaContainer = document.createElement('div')
 
   useEffect(() => {
-    modalRoot.appendChild(container)
-    return () => modalRoot.removeChild(container)
+    modalRoot.appendChild(modaContainer)
+    return () => modalRoot.removeChild(modaContainer)
   })
 
   return ReactDOM.createPortal(
     <h1 id="mohtashim">Test</h1>,
-    container
+    modaContainer
   )
 }
 
