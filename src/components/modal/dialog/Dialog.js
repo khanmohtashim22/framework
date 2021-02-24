@@ -1,32 +1,34 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import Modal from '../Modal'
+import Header from '../support/header/Header'
+import Content from '../support/content/Content'
+import Footer from '../support/footer/Footer'
+import Block from '../../block/Block'
+
+import styles from './Dialog.module.scss'
 
 const Dialog = ({ header, content, footer, ...restOfProps }) => {
+
+  const HeaderContent = typeof header === 'string' ? () => header : header
+  const BodyContent = typeof content === 'string' ? () => content : content
+  const FooterContent = typeof footer === 'string' ? () => footer : footer
+
   return (
-    <Modal {...restOfProps} >
-      <div>
-        {header}
-        {content}
-        {footer}
-      </div>
+    <Modal {...restOfProps}>
+      <Block layout={true} vertical={true} className={styles.container}>
+        <Header>
+          <HeaderContent />
+        </Header>
+        <Content>
+          <BodyContent />
+        </Content>
+        <Footer>
+          <FooterContent />
+        </Footer>
+      </Block>
     </Modal>
   )
-}
-
-Dialog.propTypes = {
-  header: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.node,
-  ]),
-  content: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.node,
-  ]),
-  footer: PropTypes.oneOfType([
-    PropTypes.node,
-  ])
 }
 
 export default Dialog

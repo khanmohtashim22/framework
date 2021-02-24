@@ -3,10 +3,15 @@ import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom'
 
 import Overlay from './support/overlay/Overlay'
+import ModalContext from './support/context/ModalContext'
 
-const Modal = ({ isOpen, children }) => {
+const Modal = ({ isOpen, children, close }) => {
   const modalRoot = document.getElementById('modal-root')
   const modaContainer = document.createElement('div')
+
+  const context = {
+    close
+  }
 
   useEffect(() => {
     modalRoot.appendChild(modaContainer)
@@ -15,9 +20,11 @@ const Modal = ({ isOpen, children }) => {
 
   return ReactDOM.createPortal(
     isOpen ? (
-      <Overlay>
-        <div>{children}</div>
-      </Overlay>
+      <ModalContext.Provider value={context}>
+        <Overlay>
+          <div>{children}</div>
+        </Overlay>
+      </ModalContext.Provider>
     ) : null,
     modaContainer
   )
