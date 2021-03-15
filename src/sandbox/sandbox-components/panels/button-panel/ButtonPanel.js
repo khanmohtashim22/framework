@@ -20,16 +20,15 @@ const ButtonPanel = () => {
     <PanelContainer title="Button">
 
       <Block pb={16}>
-        <input type="checkbox" id="disabled" name="disabled" onChange={() => setDisabled(!disabled)} />
+        <input type="checkbox" id="disabled" name="disabled" checked={disabled} onChange={() => setDisabled(!disabled)} />
         <label htmlFor="disabled">Disabled</label>
       </Block>
 
       <Block pb={16}>
-        <input type="checkbox" id="focus" name="focus" onChange={focus} />
-        <label htmlFor="focus">focus</label>
+        <Button onClick={focus}>Focus on click</Button>
       </Block>
 
-      <Block el="h3" m={0} pb={16}>Last Clicked: {lastClicked}</Block>
+      <Block el="h3" m={0} pb={75}>Last Clicked: {lastClicked}</Block>
 
       <Block>
         <Button

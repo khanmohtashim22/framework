@@ -1,0 +1,28 @@
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  &.button {
+    button {
+      width: 100%;
+    }
+    &:not(:last-of-type) {
+      padding-bottom: 16px;
+    }
+  }
+
+  &.inline {
+    flex-direction: row-reverse;
+    justify-content: center;
+
+    .button {
+      flex: 1 0 auto;
+      button {
+        min-width: auto;
+      }
+    }
+  }
+
+}

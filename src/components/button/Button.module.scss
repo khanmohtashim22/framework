@@ -21,6 +21,7 @@
 .primary {
   color: white;
   background-color: $indigo;
+  border: 2px solid $indigo;
 
   &.disabled {
     background-color: $indigo-disabled;

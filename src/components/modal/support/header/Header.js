@@ -6,9 +6,7 @@ import styles from './Header.module.scss'
 
 const Header = ({ children }) => (
   <Block 
-    layout={true}
-    centered={true}
-    p="16" 
+    p={16}
     className={styles.header}
   >
     {children}
